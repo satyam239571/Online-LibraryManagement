@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+        @font-face {
+            font-family: Canela-Bold;
+            src: url(fonts/Canela-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: NeueHaasDisplay-Roman;
+            src: url(fonts/NeueHaasDisplay-Roman.ttf);
+        }
+
+        .display-4 {
+            color: #007BFF;
+            font-family: Canela-Bold;
+        }
+
+        .text-muted {
+            color: #D91F34 !important;
+            font-family: NeueHaasDisplay-Roman;
+            font-weight: 500;
+        }
+
+        input,
+        button {
+            font-family: NeueHaasDisplay-Roman;
+        }
+
+        .login,
+        .image {
+            min-height: 100vh;
+        }
+
+        .bg-image {
+            background-image: url('img/alt.png');
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .logoutLblPos {
+            position: fixed;
+            right: 10px;
+            top: 5px;
+        }
+    </style>
+    <title>Library Management System</title>
+    <script type="text/javascript">
+        function validatePin(event) {
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Get the PIN value
+            var p = document.getElementById('pin').value;
+
+            // Check if the PIN is correct
+            if (p === '9571') {
+                // Redirect to the admin page
+                alert("Password Match");
+
+                window.location.href = "dashadmin.php";
+            } else {
+                // Show an alert for incorrect PIN
+                alert("Entered PIN is incorrect or missing!");
+                // Optionally, clear the PIN input field
+                document.getElementById('pin').value = '';
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <!-- The image half -->
+            <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+            <!-- The content half -->
+            <div class="col-md-6 ">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 col-xl-7 mx-auto">
+                                <h3 class="display-4 text-center">Welcome Admin!</h3>
+                                <p class="text-muted mb-3 text-center">Enter the Security PIN to view all the books.</p>
+                                <form id="pinForm" onsubmit="validatePin(event)">
+                                    <div class="form-group mb-3">
+                                        <input id="pin" type="password" placeholder="Security PIN"
+                                            class="form-control rounded-pill border-0 shadow-sm px-4" required>
+                                    </div>
+                                    <br>
+                                    <button type="submit"
+                                        class="btn btn-warning btn-block mb-2 rounded-pill shadow-sm">View
+                                    </button>
+                                </form>
+                                <label class="logoutLblPos">
+                                    <div style="float:left; text-align:center; padding:5px;">
+                                        <a href="login.html"><i class="fa fa-user"></i></a><br>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://kit.fontawesome.com/3bd10c11aa.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+@font-face {
+    font-family: Canela-Bold;
+    src: url(../fonts/Canela-Bold.ttf);
+}
+
+@font-face {
+    font-family: NeueHaasDisplay-Roman;
+    src: url(../fonts/NeueHaasDisplay-Roman.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: NeueHaasDisplay-Roman;
+}
+
+#header {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+}
+
+.navbar {
+    padding: 50px 0;
+}
+
+.navbar-brand {
+    /* font-weight: 600; */
+    font-size: 1.5em;
+    font-family: Canela-Bold;
+}
+
+.navbar-dark .navbar-brand {
+    color: #ffffff;
+}
+
+.nav-item {
+    /* font-weight: 600; */
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+    background: #dcdde1;
+    color: #262626;
+}
+
+.main {
+    position: relative;
+    background: url(../img/lib1.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 220px 0 200px;
+}
+
+.main table {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+@media(max-width: 768px){
+    .main{
+        padding: 200px 0;
+    }
+
+    .main table{
+        font-size: 0.8em;
+    }
+
+    /* responsive problems to be resolved */
+}
